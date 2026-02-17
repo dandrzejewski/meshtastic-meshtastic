@@ -6,7 +6,7 @@ authors: [thebentern, niccellular]
 tags: ["Meshtastic", "iOS", "TAK", "iTAK", "ATAK", "integration", "situational awareness"]
 date: 2026-02-17T09:00
 hide_table_of_contents: false
-image: "/img/blog/tak-example.webp"
+image: "/img/blog/tak-example.png"
 ---
 
 We're excited to announce a major new feature in the Meshtastic iOS app: TAK Server integration. This update bridges two powerful ecosystems—Meshtastic's long-range mesh networking and the Team Awareness Kit (TAK) family of applications such as iTAK.
@@ -41,7 +41,7 @@ iOS tells a different story. Apple's sandboxing and app isolation prevent iTAK f
 
 The new TAK integration in Meshtastic iOS creates a bridge between these two worlds:
 
-## How It Works
+### How It Works
 
 Our solution was to build a TAK server directly into the Meshtastic iOS app!
 
@@ -54,17 +54,17 @@ flowchart LR
     A[iTAK] <--> B[Meshtastic iOS App] <--> C[Mesh Network] <--> D[Other Meshtastic Nodes] <--> E[ATAK/iTAK]
 ```
 
-## Key Features
+### Key Features
 
-### Position Sharing (PLI)
+#### Position Sharing (PLI)
 
 Your location from iTAK is automatically shared across the mesh. Team members running ATAK on Android or iTAK on other iOS devices will see your position update in real-time on their maps—no cell towers required.
 
-### GeoChat Messaging
+#### GeoChat Messaging
 
 Send and receive text messages between TAK clients through the mesh. Whether you're coordinating a search grid or checking in with base camp, messages flow seamlessly across the mesh network into your connected TAK clients.
 
-### Markers / Points of Interest
+#### Markers / Points of Interest
 
 Drop a marker in iTAK for a found item, hazard, or rally point—it propagates through the mesh to all connected TAK clients automatically.
 
@@ -80,7 +80,6 @@ Drop a marker in iTAK for a found item, hazard, or rally point—it propagates t
 3. Configure your TAK settings in the app (Settings → Scroll to the bottom: TAK Server) and start the TAK Server
 4. Connect iTAK to the Meshtastic app's local TAK endpoint by downloading the Data Package from the app and importing it into iTAK
 5. Go off-grid with full situational awareness!
-
 
 
 ## What's Next
