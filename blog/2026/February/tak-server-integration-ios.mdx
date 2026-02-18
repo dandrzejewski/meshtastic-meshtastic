@@ -6,6 +6,7 @@ authors: [thebentern, niccellular]
 tags: ["Meshtastic", "iOS", "TAK", "iTAK", "ATAK", "integration", "situational awareness"]
 date: 2026-02-17T09:00
 hide_table_of_contents: false
+image: "/img/blog/tak_ios_blog_cover.png"
 ---
 
 import ReactPlayer from "react-player";
@@ -35,7 +36,7 @@ This is where Meshtastic shines! Our mesh radios can communicate over long dista
 
 On Android, integrating Meshtastic with ATAK is straightforward. ATAK's plugin architecture allows the Meshtastic ATAK plugin to hook directly into the app, bridging mesh communication seamlessly. Android users have enjoyed this capability for years.
 
-iOS tells a different story. Apple's sandboxing and app isolation prevent apps from loading external plugins the way Android / ATAK can. This left iOS users without a path to TAK integration—until now.
+iOS tells a different story. Apple's sandboxing and app isolation prevent apps from loading external plugins the way Android/ATAK can. This left iOS users without a path to TAK integration—until now.
 
 <div style={{textAlign: 'center', margin: '2rem 0'}}>
   <img src="/img/blog/itak-user.png" alt="One does not simply meme" style={{maxWidth: '400px'}} />
@@ -52,7 +53,7 @@ Our solution was to build a TAK server directly into the Meshtastic iOS app!
 
 When you enable the TAK Server feature, the Meshtastic app spins up a local TAK-compliant server endpoint on your device. iTAK and TAK Aware connect directly to this local server just as they would connect to any cloud-based TAK server—no special configuration or workarounds required from the user's perspective.
 
-Behind the scenes, the integration handles the translation between TAK's CoT XML protocol and Meshtastic's wire optimized mesh packets. The result is transparent to users—TAK clients simply work, as if connected to a traditional TAK server.
+Behind the scenes, the integration handles the translation between TAK's CoT XML protocol and Meshtastic's wire-optimized mesh packets. The result is transparent to users, TAK clients simply work, as if connected to a traditional TAK server.
 
 ```mermaid
 flowchart LR
