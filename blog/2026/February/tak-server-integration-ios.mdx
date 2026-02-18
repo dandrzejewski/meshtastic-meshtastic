@@ -14,7 +14,6 @@ We're excited to announce a major new feature in the Meshtastic iOS app: TAK Ser
 
 {/* truncate */}
 
-![TAK integration example showing GeoChat message](/img/blog/tak-example.webp)
 
 ## What is TAK?
 
@@ -51,9 +50,9 @@ The new TAK integration in Meshtastic iOS creates a bridge between these two wor
 
 Our solution was to build a TAK server directly into the Meshtastic iOS app!
 
-When you enable the TAK Server feature, the Meshtastic app spins up a local TAK-compliant server endpoint on your device. iTAK connects directly to this local server just as it would connect to any cloud-based TAK server—no special configuration or workarounds required from the user's perspective.
+When you enable the TAK Server feature, the Meshtastic app spins up a local TAK-compliant server endpoint on your device. iTAK and TAK Aware connect directly to this local server just as they would connect to any cloud-based TAK server—no special configuration or workarounds required from the user's perspective.
 
-Behind the scenes, the integration handles the translation between TAK's CoT XML protocol and Meshtastic's efficient mesh packets. The result is transparent to users—iTAK simply works, as if connected to a traditional TAK server.
+Behind the scenes, the integration handles the translation between TAK's CoT XML protocol and Meshtastic's wire optimized mesh packets. The result is transparent to users—TAK clients simply work, as if connected to a traditional TAK server.
 
 ```mermaid
 flowchart LR
@@ -69,6 +68,7 @@ Your location from TAK is automatically shared across the mesh. Team members run
 #### GeoChat Messaging
 
 Send and receive text messages between TAK clients through the mesh. Whether you're coordinating a search grid or checking in with base camp, messages flow seamlessly across the mesh network into your connected TAK clients.
+![TAK integration example showing GeoChat message](/img/blog/tak-example.webp)
 
 #### Markers / Points of Interest
 
