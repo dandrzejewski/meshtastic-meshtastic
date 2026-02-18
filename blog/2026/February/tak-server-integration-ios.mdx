@@ -20,7 +20,7 @@ We're excited to announce a major new feature in the Meshtastic iOS app: TAK Ser
 
 The Team Awareness Kit (TAK) is a geospatial mapping and situational awareness platform originally developed for the U.S. military. It has since been adopted by first responders, search and rescue teams, disaster relief organizations, and outdoor enthusiasts. TAK applications display team members' positions on a shared map, allow placement of markers and annotations, and support text messaging—all using the Cursor on Target (CoT) protocol.
 
-iTAK is one of the iOS options for this platform, providing a subset of the same powerful ATAK capabilities on iPhone and iPad.
+iTAK and TAK Aware are the two main iOS options for this platform, providing a subset of the same powerful ATAK capabilities on iPhone and iPad.
 
 ## Why TAK and Meshtastic?
 
@@ -36,7 +36,7 @@ This is where Meshtastic shines! Our mesh radios can communicate over long dista
 
 On Android, integrating Meshtastic with ATAK is straightforward. ATAK's plugin architecture allows the Meshtastic ATAK plugin to hook directly into the app, bridging mesh communication seamlessly. Android users have enjoyed this capability for years.
 
-iOS tells a different story. Apple's sandboxing and app isolation prevent iTAK from loading external plugins the way ATAK can. This left iOS users without a path to TAK integration—until now.
+iOS tells a different story. Apple's sandboxing and app isolation prevent apps from loading external plugins the way Android / ATAK can. This left iOS users without a path to TAK integration—until now.
 
 <div style={{textAlign: 'center', margin: '2rem 0'}}>
   <img src="/img/blog/itak-user.png" alt="One does not simply meme" style={{maxWidth: '400px'}} />
@@ -64,7 +64,7 @@ flowchart LR
 
 #### Position Sharing (PLI)
 
-Your location from iTAK is automatically shared across the mesh. Team members running ATAK on Android or iTAK on other iOS devices will see your position update in real-time on their maps—no cell towers required.
+Your location from TAK is automatically shared across the mesh. Team members running ATAK on Android or TAK clients on other iOS devices will see your position update in real-time on their maps—no cell towers required.
 
 #### GeoChat Messaging
 
@@ -72,13 +72,16 @@ Send and receive text messages between TAK clients through the mesh. Whether you
 
 #### Markers / Points of Interest
 
-Drop a marker in iTAK for a found item, hazard, or rally point—it propagates through the mesh to all connected TAK clients automatically.
+Drop a marker in iTAK or TAK Aware for a found item, hazard, or rally point—it propagates through the mesh to all connected TAK clients automatically.
 
+![TAK Aware display showing mesh integration](/img/blog/tak_aware_woods.webp)
 
 ## Getting Started
 
-:::warning[Bandwidth Consideration]
-The TAK integration generates more traffic than typical Meshtastic usage. Consider using a higher bandwidth preset like **Short Fast** or **Short Turbo** for optimal performance, especially when sharing frequent position updates or markers.
+:::warning[Bandwidth and Encryption]
+The TAK integration generates more traffic than typical Meshtastic usage.
+Consider using a higher bandwidth preset like **Short Fast** or **Short Turbo** for optimal performance, especially when sharing frequent position updates or markers.
+Additionally, all TAK data is broadcast through your primary channel, so ensure your mesh is configured with a private channel and encryption enabled to protect your sensitive situational awareness data.
 :::
 
 <ReactPlayer
@@ -93,7 +96,7 @@ The TAK integration generates more traffic than typical Meshtastic usage. Consid
 3. Setup your primary channel. This is the channel your node will use to communicate with the mesh network
 4. Configure your LoRa configuration settings to a higher bandwidth preset like **Short Fast** or **Short Turbo** for optimal performance with TAK integration
 5. Configure your TAK settings in the app (Settings → Scroll to the bottom: TAK Server) and start the TAK Server
-6. Connect iTAK to the Meshtastic app's local TAK endpoint by downloading the Data Package from the app and importing it into iTAK
+6. Connect iTAK or TAK Aware to the Meshtastic app's local TAK endpoint by downloading the Data Package from the app and importing it into your TAK client
 7. Go off-grid with full situational awareness!
 
 
